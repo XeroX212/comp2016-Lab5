@@ -72,7 +72,7 @@ db.once('open', function(callback) {
 // mongoose.connect('mongodb://localhost/test');
 
 // connect to mlab instance directly
-// mongoose.connect('mongodb://gcrfreeman:2106pass@ds056288.mlab.com:56288/comp2106');
+// mongoose.connect('mongodb://gc200299028:123456q@ds064278.mlab.com:64278/student200299028');
 
 // read db connection string from our config file
 var configDb = require('./config/db.js');
