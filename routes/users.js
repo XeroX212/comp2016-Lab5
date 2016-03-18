@@ -1,17 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-
-  //res.send('respond with a resource');
-    
-    var usernames = ['Me', 'You', 'Them'];
-    
-    // show the users.ejs view in the browser
-    res.render('users', { title: 'Users',
-                         users: usernames });
+// link to account
+var Account = require('../models/account');
+//GET users listin.
+router.get('/', function(req, res) {
+   // Retrieve all users
+	Account.find(function (err, accounts) {
+		// if we get an error
+		if (err) {
+			console.log(err);
+			res.end(err);
+		}
+		else {
+			// show the view and pass data into it (if we get data)
+			res.render('users', {
+				title: 'Users',
+				users: accounts
+			});
+		}
+	});
 });
-
-
 module.exports = router;
