@@ -1,5 +1,7 @@
-# comp2106-lesson8
+# Lab 5 
 
-Adding Delete functionality
+link to existing Account model
 
-Setting up Passport for Authentication
+GET requests at /users so that it queries database using Account model and fetches a list of all users
+
+user _ids and usernames
